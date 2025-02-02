@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D70A3C5-4DB5-4B1A-BEB4-70469BFF3B68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CIS_CanteenInventorySystem</RootNamespace>
+    <AssemblyName>CIS-CanteenInventorySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangePassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassForm.Designer.cs">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangePassForm.resx">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52-521935_close-white-close-button-png-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbInfo.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbInfo_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbInfo.mdf</DependentUpon>
+    </Content>
+    <Content Include="Resources\Downloads\1000_F_119329387_sUTbUdeyhk0nuhNw5WaFvOyQFmxeppjX-removebg-preview.png" />
+    <Content Include="Resources\Downloads\1000_F_119329387_sUTbUdeyhk0nuhNw5WaFvOyQFmxeppjX.jpg" />
+    <Content Include="Resources\Downloads\1000_F_177239726_lhCuyziNgGCpjHiscWgKJXDsxs8Ivv1X.jpg" />
+    <Content Include="Resources\Downloads\1000_F_233100502_5hpsaTNSxMrKbFPxgNivjhH6sSg2AaY6-removebg-preview.png" />
+    <Content Include="Resources\Downloads\1000_F_233100502_5hpsaTNSxMrKbFPxgNivjhH6sSg2AaY6.jpg" />
+    <Content Include="Resources\Downloads\1000_F_297431604_r7cepz6wVhDwG34H9YVVXbQQE1fAzoJg.jpg" />
+    <Content Include="Resources\Downloads\1000_F_414859731_71dzY7CwvAokjpPhWGtodLNzhNSIdEQb.jpg" />
+    <Content Include="Resources\Downloads\1000_F_431472992_Cy1JpqnW7lXWb1uPFqONz2LJ0Y5MIQQL.jpg" />
+    <Content Include="Resources\Downloads\1000_F_448430057_cWOAOtvqqhDeU15aB5Z5VpWQhhtsB5LG.jpg" />
+    <Content Include="Resources\Downloads\1000_F_453676713_hN1LtLYX4zlRtzBqlsAHXNsnEL91UgsM.jpg" />
+    <Content Include="Resources\Downloads\1685449380212-removebg-preview.png" />
+    <Content Include="Resources\Downloads\240_F_212097365_I9qMrnNGfJPT2Qq10YO4SPqahYov7s2G.jpg" />
+    <Content Include="Resources\Downloads\240_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg" />
+    <Content Include="Resources\Downloads\270-2708063_shopping-cart-icon-shopping-cart-vector-png.png" />
+    <Content Include="Resources\Downloads\272-2727925_continue-shopping-empty-cart-png-transparent-png.png" />
+    <Content Include="Resources\Downloads\313117277_640816844458610_6819360906258657871_n.png" />
+    <Content Include="Resources\Downloads\316399724_6445875192094293_3982665297282056911_n.jpg" />
+    <Content Include="Resources\Downloads\336129130_6474489129228032_4816799971756014751_n.jpg" />
+    <Content Include="Resources\Downloads\338924877_1426015364836377_2836538565194234630_n.jpg" />
+    <Content Include="Resources\Downloads\340924054_253453640548465_2323202423018164976_n.jpg" />
+    <Content Include="Resources\Downloads\341960250_182090090997519_647247196415888730_n.jpg" />
+    <Content Include="Resources\Downloads\345454659_599750572091413_4504041232300422879_n.jpg" />
+    <Content Include="Resources\Downloads\349056286_278154371353432_1704365953565955748_n.jpg" />
+    <Content Include="Resources\Downloads\351693116_799334488516256_812670275328075367_n.jpg" />
+    <Content Include="Resources\Downloads\351714815_1289897198297068_8147128329833007613_n-removebg-preview.png" />
+    <Content Include="Resources\Downloads\351714815_1289897198297068_8147128329833007613_n.jpg" />
+    <Content Include="Resources\Downloads\352528416_274109001688879_7084090360585696428_n.jpg" />
+    <Content Include="Resources\Downloads\352599001_284076834133544_8163450163166230778_n.jpg" />
+    <Content Include="Resources\Downloads\353170357_792465435857462_1480811872561497718_n.jpg" />
+    <Content Include="Resources\Downloads\353875276_1705291559932692_6353712253654921927_n.jpg" />
+    <Content Include="Resources\Downloads\354578662_1421332395077304_8408010884471168331_n.jpg" />
+    <Content Include="Resources\Downloads\354705285_1115814842710497_8919434275506231925_n.jpg" />
+    <Content Include="Resources\Downloads\355037987_794995738924696_4580642308248140820_n.jpg" />
+    <Content Include="Resources\Downloads\355070064_1267358487218394_861823704648814774_n.jpg" />
+    <Content Include="Resources\Downloads\355113512_928839598408525_8625312438630384405_n.jpg" />
+    <Content Include="Resources\Downloads\356485864_2248911261979775_6610405017688410561_n.jpg" />
+    <Content Include="Resources\Downloads\356530592_642709807492688_2987893950887660035_n.jpg" />
+    <Content Include="Resources\Downloads\52-521935_close-white-close-button-png-removebg-preview.png" />
+    <Content Include="Resources\Downloads\67d0137c6517d5ed0fcc461f2582dcfd.gif" />
+    <None Include="Resources\pannelli-phonolook-gialli-e-rossi-installati-sul-soffitto-1024x700.jpg" />
+    <None Include="Resources\Downloads\.vs\product\v17\.suo" />
+    <None Include="Resources\Downloads\1ST PART OF NARRATIVE.docx" />
+    <None Include="Resources\Downloads\1ST PART OF NARRATIVE.pdf" />
+    <None Include="Resources\fit.gif" />
+    <None Include="Resources\giphy %282%29.gif" />
+    <None Include="Resources\giphy %281%29.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\270-2708063_shopping-cart-icon-shopping-cart-vector-png.png" />
+    <None Include="Resources\67d0137c6517d5ed0fcc461f2582dcfd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
